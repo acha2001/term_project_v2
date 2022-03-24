@@ -15,7 +15,7 @@ int main() {
     int arr[size];
     set_rand(arr, size);
 
-    mergeSort(arr, 0, size-1);
+    selection_sort(arr, size);
 
     print_arr(arr, size);
 
