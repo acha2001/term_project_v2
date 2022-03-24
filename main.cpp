@@ -18,10 +18,7 @@ int main() {
 
     srand((unsigned)time(0));
 
-    selection_sort(arr, size);
-
-    print_arr(arr, size);
-    set_rand(arr, size);
+    quick_sort(arr,0 ,size-1);
 
     print_arr(arr, size);
 
