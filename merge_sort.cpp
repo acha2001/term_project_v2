@@ -1,5 +1,6 @@
-
 #include <iostream>
+#include "sort.h"
+
 using namespace std;
 
 void merge(int arr[], int left, int middle, int right) //Merge two sub arrays
@@ -58,25 +59,4 @@ void mergeSort(int arr[], int left, int right)  //Recursive merge sort function
     mergeSort(arr, left, middle);
     mergeSort(arr, middle + 1, right);
     merge(arr, left, middle, right);
-}
-
-void print(int arr[], int n)        //Print Array
-{
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-}
-
-int main()
-{
-    int arr[] = {12, 11, 13, 5, 6, 7, 9, 25, 14, 19};
-    int size = sizeof(arr) / sizeof(arr[0]);
-
-    cout << "Unsorted Array \n";
-    print(arr, size);
-
-    mergeSort(arr, 0, size - 1);
-
-    cout << "\nSorted Arr \n";
-    print(arr, size);
-    return 0;
 }
