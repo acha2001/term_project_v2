@@ -8,3 +8,5 @@ void selection_sort(int *arr, const int n);
 
 void mergeSort(int arr[], int left, int right);//works from main  //Recursive merge sort function
 void merge(int arr[], int left, int middle, int right); //Merge two sub arrays
+
+void bubble_sort(int arr[], int n);

@@ -15,7 +15,7 @@ int main() {
     int arr[size];
     set_rand(arr, size);
 
-    selection_sort(arr, size);
+    bubble_sort(arr, size);
 
     print_arr(arr, size);
 
