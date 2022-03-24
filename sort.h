@@ -1,12 +1,10 @@
+// remove function declearation here if it has not been tested in main
 
-// Feel free to edit any funciton declerations
-// write your code and just #inlcude "sort.h at the top"
-
-void insertion_sort(int *arr, const int n); // works from main
+void insertion_sort(int *arr, const int n); 
 
 void selection_sort(int *arr, const int n); 
 
-void mergeSort(int arr[], int left, int right);//works from main  //Recursive merge sort function
-void merge(int arr[], int left, int middle, int right); //Merge two sub arrays
+void mergeSort(int arr[], int left, int right);
+void merge(int arr[], int left, int middle, int right);
 
 void bubble_sort(int arr[], int n);

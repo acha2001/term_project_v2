@@ -14,8 +14,14 @@ int main() {
 
     int arr[size];
     set_rand(arr, size);
+    print_arr(arr, size);
 
-    bubble_sort(arr, size);
+    srand((unsigned)time(0));
+
+    selection_sort(arr, size);
+
+    print_arr(arr, size);
+    set_rand(arr, size);
 
     print_arr(arr, size);
 
@@ -23,8 +29,6 @@ int main() {
 }
 
 void set_rand(int *arr, int n) {
-
-    srand((unsigned)time(0));
 
     for (int i=0; i<n; i++) {
         arr[i] = rand()%(max_number+1);
@@ -38,5 +42,5 @@ void print_arr(int *arr, int n) {
     for (int i=0; i<n; i++) {
         printf("%d, ", arr[i]);
     }
-    std::cout<< "}" <<std::endl;
+    std::cout<< "}";
 }
