@@ -1,10 +1,10 @@
 #include <iostream>
 #include "sort.h"
 
-int partition(int arr[], int low, int high) {
+int partition(int arr[], int left, int right) {
 
-    int pivot = arr[low];
-    int i = low - 1, j = high + 1;
+    int pivot = arr[left];
+    int i = left - 1, j = right + 1;
  
     while (true) {
         do {

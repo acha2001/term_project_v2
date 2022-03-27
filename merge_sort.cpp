@@ -50,13 +50,13 @@ void merge(int arr[], int left, int middle, int right) //Merge two sub arrays
     }
 }
 
-void mergeSort(int arr[], int left, int right)  //Recursive merge sort function
+void merge_sort(int arr[], int left, int right)  //Recursive merge sort function
 {
     if (left >= right)
         return;
 
     int middle = left + (right - left) / 2;
-    mergeSort(arr, left, middle);
-    mergeSort(arr, middle + 1, right);
+    merge_sort(arr, left, middle);
+    merge_sort(arr, middle + 1, right);
     merge(arr, left, middle, right);
 }
