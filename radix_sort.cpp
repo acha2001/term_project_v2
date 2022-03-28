@@ -24,7 +24,6 @@ int get_digit(int d, int input) { //div is calulated in radix sort
 
 void radix_sort(int *A, int k, int n){
     
-    std::cout << number_digits(k+1);
     int output[n]; // output array
     int temp[10]; // temp array to hold count
     int i; // var to iterate throught the arrray

@@ -11,7 +11,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) -o $@ $^
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $<
+	$(CC) -O0 $(CFLAGS) -c $<
 clean:
 	rm -rf $(TARGET) *.o
 	
