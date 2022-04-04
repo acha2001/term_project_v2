@@ -6,7 +6,7 @@
 #include "test.h"
 
 int max_number = 1000;
-int size = 199;
+int size = 399;
 int test_number = 7;
 int verbos = 0;
 
