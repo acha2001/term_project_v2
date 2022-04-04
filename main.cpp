@@ -5,8 +5,8 @@
 #include "sort.h"
 #include "test.h"
 
-int max_number = 10000;
-int size = 500000;
+int max_number = 1000;
+int size = 199;
 int test_number = 7;
 int verbos = 0;
 
