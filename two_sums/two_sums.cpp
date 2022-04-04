@@ -6,21 +6,6 @@
 #include "two_sums.h"
 
 
- 
-void print(std::unordered_set<int> const &s) {
-
-    for (auto const &i: s) {
-        std::cout << i << " ";
-    }
-}
-
-/*void print(std::vector<int> arr) {
-    printf("{");
-    for (int i=0; i<arr.size(); i++) printf("%d, ",arr.at(i));
-    printf("}");
-}
-*/
-
 // O(n^2)
 bool brute_force(std::vector<int> arr, int key) {
     
@@ -42,13 +27,11 @@ bool brute_force(std::vector<int> arr, int key) {
 // O(nlogn)
 bool better(std::vector<int> arr, int key) {
 
-    // First we need to sort the array, here in nlogn time
-    int left=0, right=arr.size()-1;
-    std::sort(arr.begin(), arr.end());
+    int left=0, right=arr.size()-1;             // First we need to sort the array,     
+    std::sort(arr.begin(), arr.end());          // here in nlogn time
 
-    // Now we can check for a sum at both ends of the array
-    while (left < right) {
-        if(arr[left]+arr[right]==key)  
+    while (left < right) {                      // Now we can check for 
+        if(arr[left]+arr[right]==key)           // a sum at both ends of the array    
             return true;
 
         else if (arr[left]+arr[right]<key) left++; 
@@ -61,25 +44,22 @@ bool better(std::vector<int> arr, int key) {
 // O(n)
 bool best(std::vector<int> arr, int key) {
 
-    int temp; // this will hold the value that
-              // we are looking for
+    int temp;                                   // this will hold the value that
+                                                // we are looking for
     std::unordered_set<int> map;
 
     for (int i=0; i<arr.size(); i++) {
 
         temp= key-arr[i];
-        // .find() returns itorator
-        // this means it isn't there
-        if ( map.find(temp) != map.end()) {
-            return true;
+        if ( map.find(temp) != map.end()) {     // .find() returns itorator
+            return true;                        // this means it isn't there
         } 
-        // serach a hash table for temp
-        // return true if found
+                                                // serach a hash table for temp
+                                                // return true if found
 
-        // if not found insert arr[i] into table
-        map.insert(arr[i]);
+        map.insert(arr[i]);                     // if not found insert arr[i] into table
+        
     }
-    print(map);
     return false;
 }
 
