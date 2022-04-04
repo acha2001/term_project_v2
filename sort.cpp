@@ -173,7 +173,7 @@ void counting_sort(int *A, int k, int n) {
         ++a[A[i]];
     }
 
-    for(i=1; i<k+1; i++) {//add up acum arr
+    for(i=1; i<k+1; i++) //add up acum arr
         a[i] = a[i] + a[i-1];
     for (i=n-1; i>-1; i--){//insert into ouput array
         temp[a[A[i]]-1] = A[i];
@@ -209,7 +209,7 @@ int get_digit(int d, int input) { //div is calulated in radix sort
     return (input/divider)%10;    
 }
 
-void radix_sort(int *A, int k, int n){
+void radix_sort(int *A, int k, int n) {
     
     int output[n]; // output array
     int temp[10]; // temp array to hold count
@@ -241,5 +241,4 @@ void radix_sort(int *A, int k, int n){
             A[i] = output[i];
     }
 }
-
 
