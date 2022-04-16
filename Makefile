@@ -1,5 +1,6 @@
 CC := g++
-CFLAGS := -Wall -g
+CFLAGS := -std=c++11 -Wall -g
+#CFLAGS := -Xclang -disable-O0-optnone -g
 TARGET := test
 
 # $(wildcard *.cpp /xxx/xxx/*.cpp): get all .cpp files from the current directory and dir "/xxx/xxx/"
