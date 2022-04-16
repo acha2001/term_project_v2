@@ -10,7 +10,7 @@ int max_number = 10;
 int size = 100;
 int test_number = 7;
 int verbos = 0;
-int trials = 10; 
+int trials = 100; 
 
 // Makes a random array
 // prints array
