@@ -77,7 +77,7 @@ void test(int* arr, int number) {
     else if (number == 7) {
         //void quick sort (int* arr, int p, int r)
         printf("Quick Sort - ");
-        quick_sort(arr, max_number, size);
+        quick_sort(arr, 0, size-1);
     }
 }
 
