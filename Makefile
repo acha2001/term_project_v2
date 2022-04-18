@@ -1,5 +1,5 @@
-CC := g++
-CFLAGS := -std=c++11 -Wall -g
+CC := g++ -std=c++11
+CFLAGS := -Wall -g
 #CFLAGS := -Xclang -disable-O0-optnone -g
 TARGET := test
 
