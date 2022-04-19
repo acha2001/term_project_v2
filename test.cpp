@@ -30,53 +30,53 @@ void test(int* arr, int number) {
 
     if (number == 0) {
         // void insertion_sort(int *arr, const int n); 
-        // printf("Insertion Sort - ");
+        printf("Insertion Sort - ");
         insertion_sort(arr, size);
 
     }
     else if (number == 1) {
         // void selection_sort(int *arr, const int n); 
-        // printf("Selection Sort - ");
+        printf("Selection Sort - ");
         selection_sort(arr, size);
 
     }
     else if (number == 2) {
 
         // void merge_sort(int arr[], int left, int right);
-        // printf("Merge Sort - ");
+        printf("Merge Sort - ");
         merge_sort(arr, 0, size - 1);
 
     }
     else if (number == 3) {
 
         // void bubble_sort(int arr[], int n);
-        // printf("Bubble Sort - ");
+        printf("Bubble Sort - ");
         bubble_sort(arr, size);
 
     }
     else if (number == 4) {
 
         // void counting_sort(int *A, int k, int n);// k is the largest int in the array
-        // printf("Counting Sort - ");
+        printf("Counting Sort - ");
         counting_sort(arr, max_number, size);
 
     }
     else if (number == 5) {
 
         //i void radix_sort(int *A, int k, int n);
-        // printf("Radix Sort - ");
+        printf("Radix Sort - ");
         radix_sort(arr, max_number, size);
 
     }
     else if (number == 6) {
 
         // void heap_sort(int *arr, int n);
-        // printf("Heap Sort - ");
+        printf("Heap Sort - ");
         heap_sort(arr, size);
     }
     else if (number == 7) {
         //void quick sort (int* arr, int p, int r)
-        // printf("Quick Sort - ");
+        printf("Quick Sort - ");
         quick_sort(arr, 0, size-1);
     }
 }
@@ -164,6 +164,17 @@ void set_worst(int* arr, int number) {
         }
     }
 
+    else if (number == 7) {
+
+
+        // reversing array might not be correct 
+        int temp;
+        for (int j = 0; j < size / 2; j++) {
+            temp = arr[j];
+            arr[j] = arr[size - j - 1];
+            arr[size - j - 1] = temp;
+        }
+    }
 }
 
 // The next three functions are utility funcitons for merge worst case.
