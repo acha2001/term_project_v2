@@ -108,12 +108,12 @@ int partition(int arr[], int left, int right) {
 
     while (true) {
         do {
-            j--;
-        } while (arr[j] > pivot);
-
-        do {
             i++;
         } while (arr[i] < pivot);
+
+        do {
+            j--;
+        } while (arr[j] > pivot);
 
         if (i < j) {
             std::swap(arr[i], arr[j]);
@@ -157,6 +157,10 @@ void max_heapify(int* arr, int n, int i) {
 void heap_sort(int* arr, int n) {
     for (int i = (n / 2) - 1; i > -1; i--) {
         max_heapify(arr, n, i);
+    }
+    for (int i = n - 1; i > 0; i--) {
+        std::swap(arr[0], arr[i]);
+        max_heapify(arr, i, 0);
     }
 }
 
@@ -214,6 +218,8 @@ int get_digit(int d, int input) { //div is calulated in radix sort
 }
 
 void radix_sort(int* A, int k, int n) {
+
+    std::cout << "here" << std::endl;
 
     int* output = new int[n]; // output array
     int* temp = new int[10]; // temp array to hold count
